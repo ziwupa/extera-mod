@@ -1,0 +1,128 @@
+.class public Lio/noties/markwon/ext/latex/JLatexMathBlockParser$Factory;
+.super Lorg/commonmark/parser/block/AbstractBlockParserFactory;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/noties/markwon/ext/latex/JLatexMathBlockParser;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Factory"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 69
+    invoke-direct {p0}, Lorg/commonmark/parser/block/AbstractBlockParserFactory;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public tryStart(Lorg/commonmark/parser/block/ParserState;Lorg/commonmark/parser/block/MatchedBlockParser;)Lorg/commonmark/parser/block/BlockStart;
+    .locals 2
+
+    .line 81
+    invoke-interface {p1}, Lorg/commonmark/parser/block/ParserState;->getIndent()I
+
+    move-result p0
+
+    .line 84
+    sget p2, Lorg/commonmark/internal/util/Parsing;->CODE_BLOCK_INDENT:I
+
+    if-lt p0, p2, :cond_0
+
+    .line 85
+    invoke-static {}, Lorg/commonmark/parser/block/BlockStart;->none()Lorg/commonmark/parser/block/BlockStart;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 88
+    :cond_0
+    invoke-interface {p1}, Lorg/commonmark/parser/block/ParserState;->getNextNonSpaceIndex()I
+
+    move-result p0
+
+    .line 89
+    invoke-interface {p1}, Lorg/commonmark/parser/block/ParserState;->getLine()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    .line 90
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result p2
+
+    const/16 v0, 0x24
+
+    .line 92
+    invoke-static {v0, p1, p0, p2}, Lio/noties/markwon/ext/latex/JLatexMathBlockParser;->access$000(CLjava/lang/CharSequence;II)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ge v0, v1, :cond_1
+
+    .line 96
+    invoke-static {}, Lorg/commonmark/parser/block/BlockStart;->none()Lorg/commonmark/parser/block/BlockStart;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_1
+    const/16 v1, 0x20
+
+    add-int/2addr p0, v0
+
+    .line 100
+    invoke-static {v1, p1, p0, p2}, Lorg/commonmark/internal/util/Parsing;->skip(CLjava/lang/CharSequence;II)I
+
+    move-result p0
+
+    if-eq p0, p2, :cond_2
+
+    .line 101
+    invoke-static {}, Lorg/commonmark/parser/block/BlockStart;->none()Lorg/commonmark/parser/block/BlockStart;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 104
+    :cond_2
+    new-instance p0, Lio/noties/markwon/ext/latex/JLatexMathBlockParser;
+
+    invoke-direct {p0, v0}, Lio/noties/markwon/ext/latex/JLatexMathBlockParser;-><init>(I)V
+
+    const/4 p1, 0x1
+
+    new-array v0, p1, [Lorg/commonmark/parser/block/BlockParser;
+
+    const/4 v1, 0x0
+
+    aput-object p0, v0, v1
+
+    invoke-static {v0}, Lorg/commonmark/parser/block/BlockStart;->of([Lorg/commonmark/parser/block/BlockParser;)Lorg/commonmark/parser/block/BlockStart;
+
+    move-result-object p0
+
+    add-int/2addr p2, p1
+
+    .line 105
+    invoke-virtual {p0, p2}, Lorg/commonmark/parser/block/BlockStart;->atIndex(I)Lorg/commonmark/parser/block/BlockStart;
+
+    move-result-object p0
+
+    return-object p0
+.end method

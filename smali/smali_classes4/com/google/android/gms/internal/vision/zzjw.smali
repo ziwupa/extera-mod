@@ -1,0 +1,388 @@
+.class final Lcom/google/android/gms/internal/vision/zzjw;
+.super Lcom/google/android/gms/internal/vision/zzju;
+.source "SourceFile"
+
+
+# static fields
+.field private static final zza:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 49
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/google/android/gms/internal/vision/zzjw;->zza:Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 1
+    invoke-direct {p0, v0}, Lcom/google/android/gms/internal/vision/zzju;-><init>(Lcom/google/android/gms/internal/vision/zzjx;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/vision/zzjx;)V
+    .locals 0
+
+    .line 48
+    invoke-direct {p0}, Lcom/google/android/gms/internal/vision/zzjw;-><init>()V
+
+    return-void
+.end method
+
+.method private static zza(Ljava/lang/Object;JI)Ljava/util/List;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<",
+            "L:Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "JI)",
+            "Ljava/util/List<",
+            "T",
+            "L;",
+            ">;"
+        }
+    .end annotation
+
+    .line 15
+    invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/vision/zzjw;->zzc(Ljava/lang/Object;J)Ljava/util/List;
+
+    move-result-object v0
+
+    .line 16
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 17
+    instance-of v1, v0, Lcom/google/android/gms/internal/vision/zzjv;
+
+    if-eqz v1, :cond_0
+
+    .line 18
+    new-instance v0, Lcom/google/android/gms/internal/vision/zzjs;
+
+    invoke-direct {v0, p3}, Lcom/google/android/gms/internal/vision/zzjs;-><init>(I)V
+
+    goto :goto_0
+
+    .line 19
+    :cond_0
+    instance-of v1, v0, Lcom/google/android/gms/internal/vision/zzkw;
+
+    if-eqz v1, :cond_1
+
+    instance-of v1, v0, Lcom/google/android/gms/internal/vision/zzjl;
+
+    if-eqz v1, :cond_1
+
+    .line 20
+    check-cast v0, Lcom/google/android/gms/internal/vision/zzjl;
+
+    invoke-interface {v0, p3}, Lcom/google/android/gms/internal/vision/zzjl;->zza(I)Lcom/google/android/gms/internal/vision/zzjl;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 21
+    :cond_1
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0, p3}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 22
+    :goto_0
+    invoke-static {p0, p1, p2, v0}, Lcom/google/android/gms/internal/vision/zzma;->zza(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-object v0
+
+    .line 23
+    :cond_2
+    sget-object v1, Lcom/google/android/gms/internal/vision/zzjw;->zza:Ljava/lang/Class;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 24
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    add-int/2addr v2, p3
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    .line 25
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+
+    .line 27
+    invoke-static {p0, p1, p2, v1}, Lcom/google/android/gms/internal/vision/zzma;->zza(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-object v1
+
+    .line 28
+    :cond_3
+    instance-of v1, v0, Lcom/google/android/gms/internal/vision/zzlz;
+
+    if-eqz v1, :cond_4
+
+    .line 29
+    new-instance v1, Lcom/google/android/gms/internal/vision/zzjs;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    add-int/2addr v2, p3
+
+    invoke-direct {v1, v2}, Lcom/google/android/gms/internal/vision/zzjs;-><init>(I)V
+
+    .line 30
+    check-cast v0, Lcom/google/android/gms/internal/vision/zzlz;
+
+    invoke-virtual {v1, v0}, Lcom/google/android/gms/internal/vision/zzhj;->addAll(Ljava/util/Collection;)Z
+
+    .line 32
+    invoke-static {p0, p1, p2, v1}, Lcom/google/android/gms/internal/vision/zzma;->zza(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-object v1
+
+    .line 33
+    :cond_4
+    instance-of v1, v0, Lcom/google/android/gms/internal/vision/zzkw;
+
+    if-eqz v1, :cond_5
+
+    instance-of v1, v0, Lcom/google/android/gms/internal/vision/zzjl;
+
+    if-eqz v1, :cond_5
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/google/android/gms/internal/vision/zzjl;
+
+    .line 34
+    invoke-interface {v1}, Lcom/google/android/gms/internal/vision/zzjl;->zza()Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    .line 35
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    add-int/2addr v0, p3
+
+    invoke-interface {v1, v0}, Lcom/google/android/gms/internal/vision/zzjl;->zza(I)Lcom/google/android/gms/internal/vision/zzjl;
+
+    move-result-object p3
+
+    .line 36
+    invoke-static {p0, p1, p2, p3}, Lcom/google/android/gms/internal/vision/zzma;->zza(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-object p3
+
+    :cond_5
+    return-object v0
+.end method
+
+.method private static zzc(Ljava/lang/Object;J)Ljava/util/List;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "J)",
+            "Ljava/util/List<",
+            "TE;>;"
+        }
+    .end annotation
+
+    .line 47
+    invoke-static {p0, p1, p2}, Lcom/google/android/gms/internal/vision/zzma;->zzf(Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/List;
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final zza(Ljava/lang/Object;Ljava/lang/Object;J)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<E:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "Ljava/lang/Object;",
+            "J)V"
+        }
+    .end annotation
+
+    .line 38
+    invoke-static {p2, p3, p4}, Lcom/google/android/gms/internal/vision/zzjw;->zzc(Ljava/lang/Object;J)Ljava/util/List;
+
+    move-result-object p0
+
+    .line 39
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p2
+
+    invoke-static {p1, p3, p4, p2}, Lcom/google/android/gms/internal/vision/zzjw;->zza(Ljava/lang/Object;JI)Ljava/util/List;
+
+    move-result-object p2
+
+    .line 40
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    .line 41
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v0, :cond_0
+
+    if-lez v1, :cond_0
+
+    .line 43
+    invoke-interface {p2, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    :cond_0
+    if-lez v0, :cond_1
+
+    move-object p0, p2
+
+    .line 45
+    :cond_1
+    invoke-static {p1, p3, p4, p0}, Lcom/google/android/gms/internal/vision/zzma;->zza(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final zzb(Ljava/lang/Object;J)V
+    .locals 2
+
+    .line 3
+    invoke-static {p1, p2, p3}, Lcom/google/android/gms/internal/vision/zzma;->zzf(Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/util/List;
+
+    .line 4
+    instance-of v0, p0, Lcom/google/android/gms/internal/vision/zzjv;
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    check-cast p0, Lcom/google/android/gms/internal/vision/zzjv;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/vision/zzjv;->zze()Lcom/google/android/gms/internal/vision/zzjv;
+
+    move-result-object p0
+
+    goto :goto_1
+
+    .line 6
+    :cond_0
+    sget-object v0, Lcom/google/android/gms/internal/vision/zzjw;->zza:Ljava/lang/Class;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    .line 8
+    :cond_1
+    instance-of v0, p0, Lcom/google/android/gms/internal/vision/zzkw;
+
+    if-eqz v0, :cond_3
+
+    instance-of v0, p0, Lcom/google/android/gms/internal/vision/zzjl;
+
+    if-eqz v0, :cond_3
+
+    .line 9
+    check-cast p0, Lcom/google/android/gms/internal/vision/zzjl;
+
+    invoke-interface {p0}, Lcom/google/android/gms/internal/vision/zzjl;->zza()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    .line 10
+    invoke-interface {p0}, Lcom/google/android/gms/internal/vision/zzjl;->zzb()V
+
+    :cond_2
+    :goto_0
+    return-void
+
+    .line 12
+    :cond_3
+    invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p0
+
+    .line 13
+    :goto_1
+    invoke-static {p1, p2, p3, p0}, Lcom/google/android/gms/internal/vision/zzma;->zza(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-void
+.end method

@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/exteragram/messenger/ExteraConfig$$ExternalSyntheticLambda2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function1;
+
+
+# direct methods
+.method public synthetic constructor <init>()V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    .line 0
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-static {p1}, Lcom/exteragram/messenger/ExteraConfig;->$r8$lambda$cRXC0k_ycU22s_ShWGGcJytIzec(Ljava/lang/Integer;)Z
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+.end method

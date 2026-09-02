@@ -1,0 +1,189 @@
+.class public Lio/noties/markwon/inlineparser/BackticksInlineProcessor;
+.super Lio/noties/markwon/inlineparser/InlineProcessor;
+.source "SourceFile"
+
+
+# static fields
+.field private static final TICKS:Ljava/util/regex/Pattern;
+
+.field private static final TICKS_HERE:Ljava/util/regex/Pattern;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 16
+    const-string v0, "`+"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lio/noties/markwon/inlineparser/BackticksInlineProcessor;->TICKS:Ljava/util/regex/Pattern;
+
+    .line 18
+    const-string v0, "^`+"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lio/noties/markwon/inlineparser/BackticksInlineProcessor;->TICKS_HERE:Ljava/util/regex/Pattern;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 0
+
+    .line 14
+    invoke-direct {p0}, Lio/noties/markwon/inlineparser/InlineProcessor;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public parse()Lorg/commonmark/node/Node;
+    .locals 4
+
+    .line 27
+    sget-object v0, Lio/noties/markwon/inlineparser/BackticksInlineProcessor;->TICKS_HERE:Ljava/util/regex/Pattern;
+
+    invoke-virtual {p0, v0}, Lio/noties/markwon/inlineparser/InlineProcessor;->match(Ljava/util/regex/Pattern;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    .line 31
+    :cond_0
+    iget v1, p0, Lio/noties/markwon/inlineparser/InlineProcessor;->index:I
+
+    .line 33
+    :cond_1
+    sget-object v2, Lio/noties/markwon/inlineparser/BackticksInlineProcessor;->TICKS:Ljava/util/regex/Pattern;
+
+    invoke-virtual {p0, v2}, Lio/noties/markwon/inlineparser/InlineProcessor;->match(Ljava/util/regex/Pattern;)Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_3
+
+    .line 34
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 35
+    new-instance v2, Lorg/commonmark/node/Code;
+
+    invoke-direct {v2}, Lorg/commonmark/node/Code;-><init>()V
+
+    .line 36
+    iget-object v3, p0, Lio/noties/markwon/inlineparser/InlineProcessor;->input:Ljava/lang/String;
+
+    iget p0, p0, Lio/noties/markwon/inlineparser/InlineProcessor;->index:I
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    sub-int/2addr p0, v0
+
+    invoke-virtual {v3, v1, p0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    const/16 v0, 0xa
+
+    const/16 v1, 0x20
+
+    .line 37
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 41
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v3, 0x3
+
+    if-lt v0, v3, :cond_2
+
+    const/4 v0, 0x0
+
+    .line 42
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    if-ne v0, v1, :cond_2
+
+    .line 43
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v3, 0x1
+
+    sub-int/2addr v0, v3
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v0
+
+    if-ne v0, v1, :cond_2
+
+    .line 44
+    invoke-static {p0}, Lorg/commonmark/internal/util/Parsing;->hasNonSpace(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 45
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    sub-int/2addr v0, v3
+
+    invoke-virtual {p0, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 48
+    :cond_2
+    invoke-virtual {v2, p0}, Lorg/commonmark/node/Code;->setLiteral(Ljava/lang/String;)V
+
+    return-object v2
+
+    .line 53
+    :cond_3
+    iput v1, p0, Lio/noties/markwon/inlineparser/InlineProcessor;->index:I
+
+    .line 54
+    invoke-virtual {p0, v0}, Lio/noties/markwon/inlineparser/InlineProcessor;->text(Ljava/lang/String;)Lorg/commonmark/node/Text;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public specialCharacter()C
+    .locals 0
+
+    const/16 p0, 0x60
+
+    return p0
+.end method

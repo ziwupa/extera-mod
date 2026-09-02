@@ -1,0 +1,97 @@
+.class final Lcom/google/android/gms/cast/zzco;
+.super Lcom/google/android/gms/cast/zzdc;
+.source "SourceFile"
+
+
+# instance fields
+.field final synthetic zza:I
+
+.field final synthetic zzb:J
+
+.field final synthetic zzc:Lorg/json/JSONObject;
+
+.field final synthetic zzd:Lcom/google/android/gms/cast/RemoteMediaPlayer;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;IJLorg/json/JSONObject;)V
+    .locals 0
+
+    .line 1
+    iput p3, p0, Lcom/google/android/gms/cast/zzco;->zza:I
+
+    iput-wide p4, p0, Lcom/google/android/gms/cast/zzco;->zzb:J
+
+    iput-object p6, p0, Lcom/google/android/gms/cast/zzco;->zzc:Lorg/json/JSONObject;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/google/android/gms/cast/zzco;->zzd:Lcom/google/android/gms/cast/RemoteMediaPlayer;
+
+    invoke-direct {p0, p1, p2}, Lcom/google/android/gms/cast/zzdc;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza(Lcom/google/android/gms/cast/internal/zzx;)V
+    .locals 10
+
+    .line 1
+    iget-object p1, p0, Lcom/google/android/gms/cast/zzco;->zzd:Lcom/google/android/gms/cast/RemoteMediaPlayer;
+
+    iget v2, p0, Lcom/google/android/gms/cast/zzco;->zza:I
+
+    invoke-virtual {p1, v2}, Lcom/google/android/gms/cast/RemoteMediaPlayer;->zza(I)I
+
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v0, v1, :cond_0
+
+    .line 2
+    new-instance p1, Lcom/google/android/gms/common/api/Status;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lcom/google/android/gms/common/api/Status;-><init>(I)V
+
+    .line 3
+    new-instance v0, Lcom/google/android/gms/cast/zzdb;
+
+    invoke-direct {v0, p0, p1}, Lcom/google/android/gms/cast/zzdb;-><init>(Lcom/google/android/gms/cast/zzdc;Lcom/google/android/gms/common/api/Status;)V
+
+    .line 2
+    invoke-virtual {p0, v0}, Lcom/google/android/gms/common/api/internal/BasePendingResult;->setResult(Lcom/google/android/gms/common/api/Result;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/google/android/gms/cast/RemoteMediaPlayer;->zzg()Lcom/google/android/gms/cast/internal/zzar;
+
+    move-result-object v0
+
+    .line 4
+    invoke-virtual {p0}, Lcom/google/android/gms/cast/zzdc;->zzb()Lcom/google/android/gms/cast/internal/zzat;
+
+    move-result-object v1
+
+    iget-wide v3, p0, Lcom/google/android/gms/cast/zzco;->zzb:J
+
+    const/4 v8, 0x0
+
+    iget-object v9, p0, Lcom/google/android/gms/cast/zzco;->zzc:Lorg/json/JSONObject;
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    .line 5
+    invoke-virtual/range {v0 .. v9}, Lcom/google/android/gms/cast/internal/zzar;->zzE(Lcom/google/android/gms/cast/internal/zzat;IJ[Lcom/google/android/gms/cast/MediaQueueItem;ILjava/lang/Boolean;Ljava/lang/Integer;Lorg/json/JSONObject;)J
+
+    return-void
+.end method

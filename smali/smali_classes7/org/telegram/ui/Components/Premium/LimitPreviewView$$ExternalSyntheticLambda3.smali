@@ -1,0 +1,42 @@
+.class public final synthetic Lorg/telegram/ui/Components/Premium/LimitPreviewView$$ExternalSyntheticLambda3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/Components/Premium/LimitPreviewView;
+
+.field public final synthetic f$1:Lorg/telegram/tgnet/tl/TL_stars$Tl_starsRating;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/Premium/LimitPreviewView;Lorg/telegram/tgnet/tl/TL_stars$Tl_starsRating;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/Premium/LimitPreviewView$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/Components/Premium/LimitPreviewView;
+
+    iput-object p2, p0, Lorg/telegram/ui/Components/Premium/LimitPreviewView$$ExternalSyntheticLambda3;->f$1:Lorg/telegram/tgnet/tl/TL_stars$Tl_starsRating;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lorg/telegram/ui/Components/Premium/LimitPreviewView$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/Components/Premium/LimitPreviewView;
+
+    iget-object p0, p0, Lorg/telegram/ui/Components/Premium/LimitPreviewView$$ExternalSyntheticLambda3;->f$1:Lorg/telegram/tgnet/tl/TL_stars$Tl_starsRating;
+
+    invoke-static {v0, p0}, Lorg/telegram/ui/Components/Premium/LimitPreviewView;->$r8$lambda$ZnqkLBxLJXFI6qdVqE5lE6u49Ls(Lorg/telegram/ui/Components/Premium/LimitPreviewView;Lorg/telegram/tgnet/tl/TL_stars$Tl_starsRating;)V
+
+    return-void
+.end method

@@ -1,0 +1,36 @@
+.class public final synthetic Lcom/google/android/exoplayer2/source/dash/DashMediaSource$$ExternalSyntheticLambda1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/exoplayer2/source/dash/DashMediaSource;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$$ExternalSyntheticLambda1;->f$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 0
+
+    .line 0
+    iget-object p0, p0, Lcom/google/android/exoplayer2/source/dash/DashMediaSource$$ExternalSyntheticLambda1;->f$0:Lcom/google/android/exoplayer2/source/dash/DashMediaSource;
+
+    invoke-static {p0}, Lcom/google/android/exoplayer2/source/dash/DashMediaSource;->$r8$lambda$V-ugY7zC8WDB_SYZbnVd1X_f5Yk(Lcom/google/android/exoplayer2/source/dash/DashMediaSource;)V
+
+    return-void
+.end method

@@ -1,0 +1,26 @@
+version: 2.11.0
+apkFileName: extera.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  tag: null
+sdkInfo:
+packageInfo:
+  forcedPackageId: null
+  renameManifestPackage: null
+versionInfo:
+  versionCode: null
+  versionName: null
+sharedLibrary: false
+sparseResources: false
+compactEntries: false
+doNotCompress:
+- arsc
+- imy
+- jpg
+- mp3
+- png
+- wav
+- webp
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm

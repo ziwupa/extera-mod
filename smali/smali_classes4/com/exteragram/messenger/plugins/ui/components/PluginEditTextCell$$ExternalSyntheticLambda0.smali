@@ -1,0 +1,60 @@
+.class public final synthetic Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell;
+
+.field public final synthetic f$1:Lcom/exteragram/messenger/plugins/models/EditTextSetting;
+
+.field public final synthetic f$2:Ljava/lang/String;
+
+.field public final synthetic f$3:Ljava/lang/String;
+
+.field public final synthetic f$4:Ljava/lang/String;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell;Lcom/exteragram/messenger/plugins/models/EditTextSetting;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$0:Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell;
+
+    iput-object p2, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$1:Lcom/exteragram/messenger/plugins/models/EditTextSetting;
+
+    iput-object p3, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$2:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$3:Ljava/lang/String;
+
+    iput-object p5, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$4:Ljava/lang/String;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 4
+
+    .line 0
+    iget-object v0, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$0:Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell;
+
+    iget-object v1, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$1:Lcom/exteragram/messenger/plugins/models/EditTextSetting;
+
+    iget-object v2, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$2:Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$3:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell$$ExternalSyntheticLambda0;->f$4:Ljava/lang/String;
+
+    invoke-static {v0, v1, v2, v3, p0}, Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell;->$r8$lambda$IbrC_cSxtCiu_K4wjWo2euGo6o8(Lcom/exteragram/messenger/plugins/ui/components/PluginEditTextCell;Lcom/exteragram/messenger/plugins/models/EditTextSetting;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method

@@ -1,0 +1,57 @@
+.class final Lcom/google/android/gms/cast/zzar;
+.super Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Lcom/google/android/gms/common/api/Api$AbstractClientBuilder;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic buildClient(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Ljava/lang/Object;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)Lcom/google/android/gms/common/api/Api$Client;
+    .locals 12
+
+    .line 1
+    move-object/from16 p0, p4
+
+    check-cast p0, Lcom/google/android/gms/cast/Cast$CastOptions;
+
+    const-string v0, "Setting the API options is required."
+
+    .line 2
+    invoke-static {p0, v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 3
+    new-instance v1, Lcom/google/android/gms/cast/internal/zzy;
+
+    iget-object v5, p0, Lcom/google/android/gms/cast/Cast$CastOptions;->zza:Lcom/google/android/gms/cast/CastDevice;
+
+    iget v0, p0, Lcom/google/android/gms/cast/Cast$CastOptions;->zzd:I
+
+    int-to-long v6, v0
+
+    iget-object v8, p0, Lcom/google/android/gms/cast/Cast$CastOptions;->zzc:Landroid/os/Bundle;
+
+    iget-object v9, p0, Lcom/google/android/gms/cast/Cast$CastOptions;->zze:Ljava/lang/String;
+
+    move-object v2, p1
+
+    move-object v3, p2
+
+    move-object v4, p3
+
+    move-object/from16 v10, p5
+
+    move-object/from16 v11, p6
+
+    invoke-direct/range {v1 .. v11}, Lcom/google/android/gms/cast/internal/zzy;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/internal/ClientSettings;Lcom/google/android/gms/cast/CastDevice;JLandroid/os/Bundle;Ljava/lang/String;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
+
+    return-object v1
+.end method

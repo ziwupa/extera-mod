@@ -1,0 +1,122 @@
+.class public Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/yandex/runtime/bindings/Serializable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+    }
+.end annotation
+
+
+# instance fields
+.field private indoorData:Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+.field private subpolyline:Lcom/yandex/mapkit/geometry/Subpolyline;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 77
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;Lcom/yandex/mapkit/geometry/Subpolyline;)V
+    .locals 1
+
+    .line 60
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    .line 69
+    iput-object p1, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->indoorData:Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+    .line 70
+    iput-object p2, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->subpolyline:Lcom/yandex/mapkit/geometry/Subpolyline;
+
+    return-void
+
+    .line 66
+    :cond_0
+    const-string p0, "Required field \"subpolyline\" cannot be null"
+
+    invoke-static {p0}, Lc/f$$ExternalSyntheticBUOutline1;->m(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 62
+    :cond_1
+    const-string p0, "Required field \"indoorData\" cannot be null"
+
+    invoke-static {p0}, Lc/f$$ExternalSyntheticBUOutline1;->m(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public getIndoorData()Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+    .locals 0
+
+    .line 84
+    iget-object p0, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->indoorData:Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+    return-object p0
+.end method
+
+.method public getSubpolyline()Lcom/yandex/mapkit/geometry/Subpolyline;
+    .locals 0
+
+    .line 94
+    iget-object p0, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->subpolyline:Lcom/yandex/mapkit/geometry/Subpolyline;
+
+    return-object p0
+.end method
+
+.method public serialize(Lcom/yandex/runtime/bindings/Archive;)V
+    .locals 3
+
+    .line 99
+    iget-object v0, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->indoorData:Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+    const-class v1, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v0, v2, v1}, Lcom/yandex/runtime/bindings/Archive;->add(Lcom/yandex/runtime/bindings/Serializable;ZLjava/lang/Class;)Lcom/yandex/runtime/bindings/Serializable;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+    iput-object v0, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->indoorData:Lcom/yandex/mapkit/transport/masstransit/IndoorSegment$IndoorData;
+
+    .line 101
+    iget-object v0, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->subpolyline:Lcom/yandex/mapkit/geometry/Subpolyline;
+
+    const-class v1, Lcom/yandex/mapkit/geometry/Subpolyline;
+
+    invoke-interface {p1, v0, v2, v1}, Lcom/yandex/runtime/bindings/Archive;->add(Lcom/yandex/runtime/bindings/Serializable;ZLjava/lang/Class;)Lcom/yandex/runtime/bindings/Serializable;
+
+    move-result-object p1
+
+    check-cast p1, Lcom/yandex/mapkit/geometry/Subpolyline;
+
+    iput-object p1, p0, Lcom/yandex/mapkit/transport/masstransit/IndoorSegment;->subpolyline:Lcom/yandex/mapkit/geometry/Subpolyline;
+
+    return-void
+.end method

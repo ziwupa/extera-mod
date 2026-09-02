@@ -1,0 +1,67 @@
+.class final Lcom/google/android/gms/internal/measurement/zzdh;
+.super Lcom/google/android/gms/internal/measurement/zzeo;
+.source "SourceFile"
+
+
+# instance fields
+.field final synthetic zza:Ljava/lang/String;
+
+.field final synthetic zzb:Ljava/lang/String;
+
+.field final synthetic zzc:Landroid/os/Bundle;
+
+.field final synthetic zzd:Lcom/google/android/gms/internal/measurement/zzez;
+
+
+# direct methods
+.method public constructor <init>(Lcom/google/android/gms/internal/measurement/zzez;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 0
+
+    .line 1
+    iput-object p2, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zza:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zzb:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zzc:Landroid/os/Bundle;
+
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zzd:Lcom/google/android/gms/internal/measurement/zzez;
+
+    const/4 p2, 0x1
+
+    .line 2
+    invoke-direct {p0, p1, p2}, Lcom/google/android/gms/internal/measurement/zzeo;-><init>(Lcom/google/android/gms/internal/measurement/zzez;Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final zza()V
+    .locals 3
+
+    .line 1
+    iget-object v0, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zzd:Lcom/google/android/gms/internal/measurement/zzez;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/measurement/zzez;->zzS()Lcom/google/android/gms/internal/measurement/zzcp;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/google/android/gms/common/internal/Preconditions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/android/gms/internal/measurement/zzcp;
+
+    iget-object v1, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zza:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zzb:Ljava/lang/String;
+
+    iget-object p0, p0, Lcom/google/android/gms/internal/measurement/zzdh;->zzc:Landroid/os/Bundle;
+
+    .line 2
+    invoke-interface {v0, v1, v2, p0}, Lcom/google/android/gms/internal/measurement/zzcp;->clearConditionalUserProperty(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+
+    return-void
+.end method

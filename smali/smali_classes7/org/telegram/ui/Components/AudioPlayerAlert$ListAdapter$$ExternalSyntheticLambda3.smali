@@ -1,0 +1,44 @@
+.class public final synthetic Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter$$ExternalSyntheticLambda3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter;
+
+.field public final synthetic f$1:Lorg/telegram/ui/Cells/AudioPlayerCell;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter;Lorg/telegram/ui/Cells/AudioPlayerCell;)V
+    .locals 0
+
+    .line 0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter;
+
+    iput-object p2, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter$$ExternalSyntheticLambda3;->f$1:Lorg/telegram/ui/Cells/AudioPlayerCell;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .line 0
+    iget-object v0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter$$ExternalSyntheticLambda3;->f$0:Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter;
+
+    iget-object p0, p0, Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter$$ExternalSyntheticLambda3;->f$1:Lorg/telegram/ui/Cells/AudioPlayerCell;
+
+    invoke-static {v0, p0, p1, p2}, Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter;->$r8$lambda$VBc2oUX0wg5M_77EV9_EWFP2Kes(Lorg/telegram/ui/Components/AudioPlayerAlert$ListAdapter;Lorg/telegram/ui/Cells/AudioPlayerCell;Landroid/view/View;Landroid/view/MotionEvent;)Z
+
+    move-result p0
+
+    return p0
+.end method
